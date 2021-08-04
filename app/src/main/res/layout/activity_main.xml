@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/EnteredText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:gravity="right"
+                android:text="4 + 4"
+                android:textSize="70sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/AnswerText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:gravity="right"
+                android:text="= 8"
+                android:textColor="#A5A5A5"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EnteredText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/buttonModulus"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="%"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="modulusClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonPower"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="^"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="powerClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonSquareRoot"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="√"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="squareRootClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonClear"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="C"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="clearClicked"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="7"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="sevenClicked"/>
+
+                <Button
+                    android:id="@+id/Button8"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="8"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="eightClicked"/>
+
+                <Button
+                    android:id="@+id/Button9"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="9"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="nineClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonAdd"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="+"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="addClicked"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="4"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="fourClicked"/>
+
+                <Button
+                    android:id="@+id/Button5"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="5"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="fiveClicked"/>
+
+                <Button
+                    android:id="@+id/Button6"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="6"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="sixClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonSubtract"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="-"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="subtractClicked"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="1"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="oneClicked"/>
+
+                <Button
+                    android:id="@+id/Button2"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="2"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="twoClicked"/>
+
+                <Button
+                    android:id="@+id/Button3"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="3"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="threeClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonMultiply"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="*"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="multiplyClicked"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="0"
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="zeroClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonDecimal"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="."
+                    android:textSize="42dp"
+                    app:backgroundTint="#2196F3"
+                    app:iconTint="#673AB7"
+                    android:onClick="decimalClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonEquals"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="="
+                    android:textSize="42dp"
+                    app:backgroundTint="#4CAF50"
+                    app:iconTint="#673AB7"
+                    android:onClick="equalsClicked"/>
+
+                <Button
+                    android:id="@+id/ButtonDivide"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:text="/"
+                    android:textSize="42dp"
+                    app:backgroundTint="#3F51B5"
+                    app:iconTint="#673AB7"
+                    android:onClick="divideClicked"/>
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
