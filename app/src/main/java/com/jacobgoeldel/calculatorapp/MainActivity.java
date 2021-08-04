@@ -8,82 +8,87 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Calculator calculator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        calculator = new Calculator();
+
         setContentView(R.layout.activity_main);
     }
 
     public void zeroClicked(View view) {
-        Log.i("calculator", "zero clicked");
+        calculator.numberClicked(Number.ZERO);
     }
 
     public void oneClicked(View view) {
-        Log.i("calculator", "one clicked");
+        calculator.numberClicked(Number.ONE);
     }
 
     public void twoClicked(View view) {
-        Log.i("calculator", "two clicked");
+        calculator.numberClicked(Number.TWO);
     }
 
     public void threeClicked(View view) {
-        Log.i("calculator", "three clicked");
+        calculator.numberClicked(Number.THREE);
     }
 
     public void fourClicked(View view) {
-        Log.i("calculator", "four clicked");
+        calculator.numberClicked(Number.FOUR);
     }
 
     public void fiveClicked(View view) {
-        Log.i("calculator", "five clicked");
+        calculator.numberClicked(Number.FIVE);
     }
 
     public void sixClicked(View view) {
-        Log.i("calculator", "six clicked");
+        calculator.numberClicked(Number.SIX);
     }
 
     public void sevenClicked(View view) {
-        Log.i("calculator", "seven clicked");
+        calculator.numberClicked(Number.SEVEN);
     }
 
     public void eightClicked(View view) {
-        Log.i("calculator", "eight clicked");
+        calculator.numberClicked(Number.EIGHT);
     }
 
     public void nineClicked(View view) {
-        Log.i("calculator", "nine clicked");
+        calculator.numberClicked(Number.NINE);
     }
 
     public void decimalClicked(View view) {
-        Log.i("calculator", "decimal clicked");
+        calculator.numberClicked(Number.DECIMAL);
     }
 
     public void addClicked(View view) {
-        Log.i("calculator", "add clicked");
+        calculator.operationClicked(Operation.ADD);
     }
 
     public void subtractClicked(View view) {
-        Log.i("calculator", "subtract clicked");
+        calculator.operationClicked(Operation.SUBTRACT);
     }
 
     public void multiplyClicked(View view) {
-        Log.i("calculator", "multiply clicked");
+        calculator.operationClicked(Operation.MULTIPLY);
     }
 
     public void divideClicked(View view) {
-        Log.i("calculator", "divide clicked");
+        calculator.operationClicked(Operation.DIVIDE);
     }
 
     public void powerClicked(View view) {
-        Log.i("calculator", "power clicked");
+        calculator.operationClicked(Operation.POWER);
     }
 
     public void squareRootClicked(View view) {
-        Log.i("calculator", "square root clicked");
+        calculator.operationClicked(Operation.SQUARE_ROOT);
     }
 
     public void modulusClicked(View view) {
-        Log.i("calculator", "modulus clicked");
+        calculator.operationClicked(Operation.MODULUS);
     }
 
     public void equalsClicked(View view) {
