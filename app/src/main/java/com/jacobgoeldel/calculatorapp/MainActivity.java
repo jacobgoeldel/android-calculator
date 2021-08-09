@@ -21,8 +21,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateEquationText() {
-        TextView textView = (TextView) findViewById(R.id.EnteredText);
-        textView.setText(calculator.GetEquationText());
+        TextView equationText = (TextView) findViewById(R.id.EnteredText);
+        equationText.setText(calculator.GetEquationText());
+
+        TextView answerText = (TextView) findViewById(R.id.AnswerText);
+        answerText.setText(calculator.GetAnswerText());
     }
 
     public void zeroClicked(View view) {
