@@ -5,92 +5,123 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Calculator calculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        calculator = new Calculator();
+
         setContentView(R.layout.activity_main);
     }
 
+    public void updateEquationText() {
+        TextView textView = (TextView) findViewById(R.id.EnteredText);
+        textView.setText(calculator.GetEquationText());
+    }
+
     public void zeroClicked(View view) {
-        Log.i("calculator", "zero clicked");
+        calculator.numberClicked(Number.ZERO);
+        updateEquationText();
     }
 
     public void oneClicked(View view) {
-        Log.i("calculator", "one clicked");
+        calculator.numberClicked(Number.ONE);
+        updateEquationText();
     }
 
     public void twoClicked(View view) {
-        Log.i("calculator", "two clicked");
+        calculator.numberClicked(Number.TWO);
+        updateEquationText();
     }
 
     public void threeClicked(View view) {
-        Log.i("calculator", "three clicked");
+        calculator.numberClicked(Number.THREE);
+        updateEquationText();
     }
 
     public void fourClicked(View view) {
-        Log.i("calculator", "four clicked");
+        calculator.numberClicked(Number.FOUR);
+        updateEquationText();
     }
 
     public void fiveClicked(View view) {
-        Log.i("calculator", "five clicked");
+        calculator.numberClicked(Number.FIVE);
+        updateEquationText();
     }
 
     public void sixClicked(View view) {
-        Log.i("calculator", "six clicked");
+        calculator.numberClicked(Number.SIX);
+        updateEquationText();
     }
 
     public void sevenClicked(View view) {
-        Log.i("calculator", "seven clicked");
+        calculator.numberClicked(Number.SEVEN);
+        updateEquationText();
     }
 
     public void eightClicked(View view) {
-        Log.i("calculator", "eight clicked");
+        calculator.numberClicked(Number.EIGHT);
+        updateEquationText();
     }
 
     public void nineClicked(View view) {
-        Log.i("calculator", "nine clicked");
+        calculator.numberClicked(Number.NINE);
+        updateEquationText();
     }
 
     public void decimalClicked(View view) {
-        Log.i("calculator", "decimal clicked");
+        calculator.numberClicked(Number.DECIMAL);
+        updateEquationText();
     }
 
     public void addClicked(View view) {
-        Log.i("calculator", "add clicked");
+        calculator.operationClicked(Operation.ADD);
+        updateEquationText();
     }
 
     public void subtractClicked(View view) {
-        Log.i("calculator", "subtract clicked");
+        calculator.operationClicked(Operation.SUBTRACT);
+        updateEquationText();
     }
 
     public void multiplyClicked(View view) {
-        Log.i("calculator", "multiply clicked");
+        calculator.operationClicked(Operation.MULTIPLY);
+        updateEquationText();
     }
 
     public void divideClicked(View view) {
-        Log.i("calculator", "divide clicked");
+        calculator.operationClicked(Operation.DIVIDE);
+        updateEquationText();
     }
 
     public void powerClicked(View view) {
-        Log.i("calculator", "power clicked");
+        calculator.operationClicked(Operation.POWER);
+        updateEquationText();
     }
 
     public void squareRootClicked(View view) {
-        Log.i("calculator", "square root clicked");
+        calculator.operationClicked(Operation.SQUARE_ROOT);
+        updateEquationText();
     }
 
     public void modulusClicked(View view) {
-        Log.i("calculator", "modulus clicked");
+        calculator.operationClicked(Operation.MODULUS);
+        updateEquationText();
     }
 
     public void equalsClicked(View view) {
         Log.i("calculator", "equals clicked");
+        updateEquationText();
     }
 
     public void clearClicked(View view) {
-        Log.i("calculator", "clear clicked");
+        calculator.clear();
+        updateEquationText();
     }
 }
