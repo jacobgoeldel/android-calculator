@@ -61,6 +61,14 @@ public class Calculator {
         }
     }
 
+    public void clear() {
+        num1 = new ArrayList<Number>();
+        num2 = new ArrayList<Number>();
+
+        op = Operation.NONE;
+        enteringFirstNumber = true;
+    }
+
     private String GetNumberString(Number numb) {
         switch(numb) {
             case ZERO:

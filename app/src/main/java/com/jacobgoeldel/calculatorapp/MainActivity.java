@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clearClicked(View view) {
-        Log.i("calculator", "clear clicked");
+        calculator.clear();
         updateEquationText();
     }
 }
