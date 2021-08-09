@@ -26,16 +26,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="2">
 
-            <TextView
+            <EditText
                 android:id="@+id/EnteredText"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginStart="45dp"
                 android:layout_marginLeft="45dp"
                 android:layout_marginEnd="45dp"
                 android:layout_marginRight="45dp"
                 android:gravity="right"
-                android:text="4 + 4"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
                 android:textSize="70sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
