@@ -60,4 +60,72 @@ public class Calculator {
             enteringFirstNumber = false;
         }
     }
+
+    private String GetNumberString(Number numb) {
+        switch(numb) {
+            case ZERO:
+                return "0";
+            case DECIMAL:
+                return ".";
+            case ONE:
+                return "1";
+            case TWO:
+                return "2";
+            case THREE:
+                return "3";
+            case FOUR:
+                return "4";
+            case FIVE:
+                return "5";
+            case SIX:
+                return "6";
+            case SEVEN:
+                return "7";
+            case EIGHT:
+                return "8";
+            case NINE:
+                return "9";
+        }
+
+        return "?"; // Shouldn't get here
+    }
+
+    private String GetOperationString(Operation op) {
+        switch(op) {
+            case NONE:
+                return " ";
+            case ADD:
+                return " + ";
+            case SUBTRACT:
+                return " - ";
+            case MULTIPLY:
+                return " * ";
+            case DIVIDE:
+                return "/";
+            case POWER:
+                return "^";
+            case MODULUS:
+                return " % ";
+            case SQUARE_ROOT:
+                return " √ ";
+        }
+
+        return "?";
+    }
+
+    public String GetEquationText() {
+        String text = "";
+
+        for(Number numb : num1) {
+            text += GetNumberString(numb);
+        }
+
+        text += GetOperationString(op);
+
+        for(Number numb : num2) {
+            text += GetNumberString(numb);
+        }
+
+        return text;
+    }
 }
